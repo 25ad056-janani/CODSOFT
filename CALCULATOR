@@ -1,0 +1,114 @@
+HTML(index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+
+    <div class="buttons">
+        <button>C</button>
+        <button>/</button>
+        <button>*</button>
+        <button>-</button>
+
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>+</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>=</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+CSS (style.css)
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    text-align: right;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccc;
+}
+JAVASCRIPT (script.js)
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll("button");
+
+let input = "";
+
+// Loop through all buttons
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+        let value = this.textContent;
+
+        if (value === "C") {
+            input = "";
+            display.value = "";
+        }
+        else if (value === "=") {
+            try {
+                input = eval(input);
+                display.value = input;
+            } catch {
+                display.value = "Error";
+                input = "";
+            }
+        }
+        else {
+            input += value;
+            display.value = input;
+        }
+    });
+}
