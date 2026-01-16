@@ -1,0 +1,144 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to Our Website</h1>
+        <p>Your solution for modern web design</p>
+        <a href="#features" class="btn">Get Started</a>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="feature-box">
+            <div class="feature">
+                <h3>Simple Design</h3>
+                <p>Clean and modern layout using HTML and CSS.</p>
+            </div>
+            <div class="feature">
+                <h3>Responsive</h3>
+                <p>Works well on desktops, tablets, and mobile devices.</p>
+            </div>
+            <div class="feature">
+                <h3>User Friendly</h3>
+                <p>Easy to navigate and visually appealing interface.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>
+            We create simple and effective web designs that help beginners
+            understand layout, spacing, and styling fundamentals.
+        </p>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta">
+        <h2>Ready to Start?</h2>
+        <p>Build your first landing page using HTML and CSS today.</p>
+        <a href="#" class="btn">Join Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Landing Page Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+.header p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #4a90e2;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.feature-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Call To Action */
+.cta {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Footer */
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
